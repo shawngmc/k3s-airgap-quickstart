@@ -7,7 +7,7 @@ wget https://raw.githubusercontent.com/projectcalico/calico/${CALICO_VERSION}/ma
 CALICO_IMAGES=( cni node kube-controllers )
 for CALICO_IMAGE in "${CALICO_IMAGES[@]}"
 do
-  crane pull docker.io/calico/${CALICO_IMAGE}:${CALICO_VERSION} ${GAP_DIR}/calico-${CALICO_IMAGE}-${CALICO_VERSION}.tar
+  ${GAP_DIR}/temp/crane pull docker.io/calico/${CALICO_IMAGE}:${CALICO_VERSION} ${GAP_DIR}/calico-${CALICO_IMAGE}-${CALICO_VERSION}.tar
 done
 
 # Download Calicoctl
