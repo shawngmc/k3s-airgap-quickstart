@@ -2,6 +2,7 @@
 
 TASK=$1
 
-for script_file in `find ./$TASK/* -type f | sort -g`; do
+cd ./$TASK
+for script_file in `find *.sh -type f | sort -g`; do
     bash $script_file
 done
