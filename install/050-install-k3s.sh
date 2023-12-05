@@ -1,9 +1,6 @@
 #!/bin/bash
 
-OS=Linux
-ARCH=x86_64
-TEMP_DIR=~/tmp/k3s
-K3S_VERSION=v1.28.3%2Bk3s2
+source .env
 
 # Download K3s
 wget https://github.com/k3s-io/k3s/releases/download/${K3S_VERSION}/k3s -O $TEMP_DIR/k3s
