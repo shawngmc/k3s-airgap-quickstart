@@ -1,7 +1,6 @@
 #!/bin/bash
 
-TEMP_DIR=~/tmp/k3s
-CALICO_VERSION=v3.26.4
+source .env
 
 # Download Calico AirGap
 wget https://raw.githubusercontent.com/projectcalico/calico/v3.26.4/manifests/calico.yaml -O calico.yaml
