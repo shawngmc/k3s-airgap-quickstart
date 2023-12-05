@@ -3,7 +3,7 @@
 source .env
 
 # Download Calico AirGap
-wget https://raw.githubusercontent.com/projectcalico/calico/v3.26.4/manifests/calico.yaml -O calico.yaml
+wget https://raw.githubusercontent.com/projectcalico/calico/${CALICO_VERSION}/manifests/calico.yaml -O ${TEMP_DIR}/calico.yaml
 CALICO_IMAGES=( cni node kube-controllers )
 for $CALICO_IAMGE in "${CALICO_IMAGES[@]}"
 do
