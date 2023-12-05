@@ -1,5 +1,5 @@
 #!/bin/bash
 
-TEMP_DIR=~/tmp/k3s
+source .env
 
 mkdir ${TEMP_DIR}
