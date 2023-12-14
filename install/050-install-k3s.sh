@@ -22,6 +22,7 @@ sudo tee "/etc/rancher/k3s/config.yaml" > /dev/null <<'EOF'
 write-kubeconfig-mode: "0644"
 disable-network-policy: true
 flannel-backend: none
+cluster-cidr: 192.168.0.0/16
 EOF
 sudo chmod 644 /etc/rancher/k3s/config.yaml
 
