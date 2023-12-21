@@ -11,7 +11,7 @@ echo "${CHART_URL}" >> ${GAP_DIR}/urls.txt
 MAIN_LONGHORN_IMAGES=( longhorn-engine longhorn-manager longhorn-ui longhorn-instance-manager longhorn-share-manager backing-image-manager )
 for LONGHORN_IMAGE in "${MAIN_LONGHORN_IMAGES[@]}"
 do
-  IMAGE_URL="docker.io/longhornio/${LONGHORN_IMAGE}:${LONGHORN_VERSION}"
+  IMAGE_URL="docker.io/longhornio/${LONGHORN_IMAGE}:v${LONGHORN_VERSION}"
   ${GAP_DIR}/temp/crane pull "${IMAGE_URL}" ${GAP_DIR}/longhornio-${LONGHORN_IMAGE}-${LONGHORN_VERSION}.tar
   echo "${IMAGE_URL}" >> ${GAP_DIR}/urls.txt
 done
