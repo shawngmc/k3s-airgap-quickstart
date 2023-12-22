@@ -1,18 +1,18 @@
 #!/bin/bash
 
-source .env
+source ../gapfiles/.env
 
 # TODO: Check ISCSI dependency
 
-# Stage Longhorn Images
+echo "Staging Longhorn Images..."
 for LONGHORN_IMAGE in ${GAP_DIR}/longhornio-*.tar; do
     sudo k3s ctr images import ${LONGHORN_IMAGE}
 done
 
-# Stage chart
+echo "Staging Longhorn chart..."
 cd $GAP_DIR
 tar -zxf longhorn-chart-${LONGHORN_VERSION}.tgz
 
-# Install chart
+echo "Installing Longhorn via chart..."
 kubectl create namespace longhorn-system
 helm install longhorn $GAP_DIR/longhorn --namespace longhorn-system

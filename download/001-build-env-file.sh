@@ -5,7 +5,6 @@ source .env
 mkdir -pv ${GAP_DIR}/temp
 
 sudo tee "${GAP_DIR}/.env" > /dev/null <<EOF
-GAP_DIR=../gapfiles
 OS=Linux
 ARCH=x86_64
 CRANE_VERSION=${CRANE_VERSION}
