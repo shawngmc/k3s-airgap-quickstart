@@ -5,8 +5,10 @@ source .env
 mkdir -pv ${GAP_DIR}/temp
 
 sudo tee "${GAP_DIR}/.env" > /dev/null <<EOF
+KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 OS=Linux
 ARCH=x86_64
+K9S_VERSION=${K9S_VERSION}
 CRANE_VERSION=${CRANE_VERSION}
 K3S_VERSION=${K3S_VERSION}
 K3S_SELINUX_TAG=${K3S_SELINUX_TAG}
