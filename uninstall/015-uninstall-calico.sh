@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source .env
+source ${GAP_DIR}/.env
 
 # Uninstall Calico
 kubectl delete -f ${GAP_DIR}/calico.yaml

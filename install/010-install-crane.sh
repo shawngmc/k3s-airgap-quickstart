@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../gapfiles/.env
+source ${GAP_DIR}/.env
 
 echo "Staging Crane executable..."
 sudo tar -zxvf ${GAP_DIR}/go-containerregistry.tar.gz -C /usr/local/bin/ crane

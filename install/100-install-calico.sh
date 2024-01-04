@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../gapfiles/.env
+source ${GAP_DIR}/.env
 
 echo "Staging Calico AirGap images..."
 CALICO_IMAGES=( cni node kube-controllers )
