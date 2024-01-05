@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source .env
+source "$GAP_DIR/.env"
 
 # Download Longhorn Chart
 CHART_URL="https://github.com/longhorn/charts/releases/download/longhorn-${LONGHORN_VERSION}/longhorn-${LONGHORN_VERSION}.tgz"

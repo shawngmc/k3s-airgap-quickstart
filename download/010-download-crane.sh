@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source .env
+source "$GAP_DIR/.env"
 
 # Download Crane
 CRANE_URL="https://github.com/google/go-containerregistry/releases/download/${CRANE_VERSION}/go-containerregistry_${OS}_${ARCH}.tar.gz"

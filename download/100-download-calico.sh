@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source .env
+source "$GAP_DIR/.env"
 
 # Download Calico AirGap
 YAML_URL="https://raw.githubusercontent.com/projectcalico/calico/${CALICO_VERSION}/manifests/calico.yaml"

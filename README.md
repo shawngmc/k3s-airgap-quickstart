@@ -11,7 +11,10 @@
 
 
 ## Tasks
-### Download files
+### Freeze versions to use
+```./quickstart.sh freeze```
+
+### Download files for frozen versions
 ```./quickstart.sh download```
 
 ### Install from downloaded files

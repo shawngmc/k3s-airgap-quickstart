@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source .env
+source "$GAP_DIR/.env"
 
 # Download Helm
 HELM_EXEC_URL="https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz"

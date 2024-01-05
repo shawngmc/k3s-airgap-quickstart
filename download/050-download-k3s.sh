@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source .env
+source "$GAP_DIR/.env"
 
 # Download K3s
 EXEC_URL="https://github.com/k3s-io/k3s/releases/download/${K3S_VERSION}/k3s"
