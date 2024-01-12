@@ -1,5 +1,13 @@
 # k3s-airgap-quickstart
 
+## Requirements
+## yq
+On Rocky 8:
+```
+sudo yum install -y python3
+python3 -m pip install --user yq
+```
+
 ## Stack
 - K3s
   - Flannel (disabled due to nf_tables issues)
