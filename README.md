@@ -1,22 +1,27 @@
 # k3s-airgap-quickstart
 
 ## Requirements
-## yq
+### Path modification
+/usr/local/bin must be on the PATH.
+
+```
+echo "export PATH=\"/usr/local/bin:$PATH\"" >> ~/.bashrc
+source ~/.bashrc
+```
+
+### yq
 On Rocky 8:
 ```
-sudo yum install -y python3
+sudo yum install -y python3 python3-pip
 python3 -m pip install --user yq
 ```
 
 ## Stack
-- K3s
-  - Flannel (disabled due to nf_tables issues)
-- Calico
-  - Includes calicoctl
-  - Not using operator - makes little sense in airgapped installs
+- Kind
 - Helm
 - Crane
-
+- Kubectl
+- K9s
 
 ## Tasks
 ### Freeze versions to use
@@ -34,6 +39,3 @@ python3 -m pip install --user yq
 
 
 ## Notes
-- If installing manually, K3s pods will be in 'Pending' state until Calico is installed
-  - This is because Flannel is disabled, so the node has no CNI - ```kubectl describe node``` should show it as not ready because there is no CNI
-- K3s Uninstall only cleans up resources IT installs - see https://github.com/k3s-io/k3s/issues/1469

@@ -3,7 +3,7 @@
 source "$GAP_DIR/.env"
 
 # Download Kind
-EXEC_URL="https://github.com/kubernetes-sigs/kind/releases/download/${K3S_VERSION}/kind-linux-amd64"
+EXEC_URL="https://github.com/kubernetes-sigs/kind/releases/download/v${KIND_VERSION}/kind-linux-amd64"
 wget "${EXEC_URL}" -O $GAP_DIR/kind
 echo "${EXEC_URL}" >> ${GAP_DIR}/urls.txt
 
